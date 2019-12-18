@@ -79,3 +79,22 @@ for (let i = 1; i <= 112; i += 3) {
   number += i;
 };
 console.log(number);
+// Даны a и n. Вычислите p=(a+1)**2(a+2)**2⋅…⋅(a+n)**2
+const number = (a, n) => {
+  let p = 1;
+  for (let i = 1; i <= n; i += 1) {
+    p *= Math.pow((a + i), 2);
+  }
+  console.log(p)
+}
+number(1, 2);
+
+// Вычислите 1⋅2+2⋅3⋅4+...+n⋅(n+1)⋅2n.
+const numer = (n) => {
+  let p = 0;
+  for (let i = 1; i <= n; i += 1) {
+    p += i * (i + 1) * 2 * i;
+  }
+  console.log(p);
+};
+numer(2);
